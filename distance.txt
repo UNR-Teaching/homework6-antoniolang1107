@@ -1,0 +1,9 @@
+Reno SanFrancisco 218
+Reno SaltLakeCity 519
+Seattle SanFrancisco 807
+Seattle Reno 703
+Seattle SaltLakeCity 840
+Seattle LasVegas 1124
+LasVegas SaltLakeCity 420
+LasVegas Reno 439
+LasVegas SanFrancisco 567
