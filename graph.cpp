@@ -106,3 +106,34 @@ void Graph<LabelType>::displayMatrix() {
         std::cout << std::endl;
     }
 }
+
+template <class LabelType>
+void Graph<LabelType>::DepthFirstTraversal(LabelType start, visit) {
+    std::stack<int> DFTstack;
+    bool visited[graphSize];
+}
+
+
+
+template <class LabelType>
+void Graph<LabelType>::BreadthFirstTraversal(LabelType start, visit) {
+    std::queue<int> BFTqueue;
+    bool visited[graphSize] = false;
+
+    BFTqueue.enqueue(getLabelIndex(start));
+    visited[getLabelIndex(start)] = true;
+
+    LabelType current;
+    while (!BFTqueue.empty()) {
+        current = BFTqueue.peek();
+        BFTqueue.dequeue();
+
+        for (int i = 0; i < adjMatrix[getLabelIndex(current)].size() == 1; i++) {
+            if (adjMatrix[getLabelIndex(current)][i] < 0 && (!visited[i])) {
+                BFTqueue.enqueue(i);
+                visited[i] = true;
+            }
+        }
+    }
+
+}

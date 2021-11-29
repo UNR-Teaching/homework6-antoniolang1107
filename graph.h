@@ -1,9 +1,12 @@
 #ifndef GRAPH_H
 #define GRAPH_H
 #include <iostream>
+#include <queue>
+#include <stack>
+#include "graphinterface.h"
 
 template <class LabelType>
-class Graph {
+class Graph : public GraphInterface<LabelType> {
 private:
     int graphSize;
     static const int MAX_SIZE = 10;
@@ -23,8 +26,8 @@ public:
     void displayLabels();
     void displayMatrix();
     
-    //void depthFirstTraversal(LabelType start, visit);
-    //void breadthFirstTraversal(LabelType start, visit);
+    void depthFirstTraversal(LabelType start, visit);
+    void breadthFirstTraversal(LabelType start, visit);
 };
 
 #include "graph.cpp"

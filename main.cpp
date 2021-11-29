@@ -17,6 +17,7 @@ int main() {
     while (readFile >> tempStart >> tempEnd >> tempWeight) {
         graph.add(tempStart, tempEnd, tempWeight);
     }
+    readFile.close();
 
 
     graph.displayLabels();
@@ -24,6 +25,14 @@ int main() {
     return 0;
 }
 
+void writeFile(std::string fileName) {
+    std::ofstream writeFile;
+    writeFile.open(fileName);
+    // while (pathArray) {
+    //  writeFile << path << std::endl;
+    // }
+    // writeFile << "best: " << path << std::endl;
+}
 
 // have possible paths output
 //      select the best possible [use "min( , )"]
